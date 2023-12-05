@@ -1,0 +1,87 @@
+#itemContent {
+    margin-top: 7%;
+}
+
+
+.item1 {
+    color: #0d377e;
+}
+
+.home {
+    color: #9898ac;
+}
+
+.item {
+    color: #616165;
+}
+
+.search {
+    color: #0d377e;
+    font-weight: 600;
+}
+
+.searchBar {
+    box-shadow: 0 0 8px rgb(192, 188, 188);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: white;
+}
+
+#name {
+    width: 100%;
+}
+
+#stock {
+    width: 100%;
+}
+
+
+#status {
+    width: 100%;
+}
+
+#salePrice {
+    width: 100%;
+    position: relative;
+}
+
+#searchBtn {
+    position: absolute;
+    top: 237px;
+    right: 125px;
+    height: 38px;
+    width: 38px;
+    border: 2px solid #8fbcfe;
+    border-radius: 8px;
+    color: #8fbcfe;
+    background-color: white;
+
+}
+
+.searchIcon {
+    margin-top: -3px;
+}
+
+#table {
+    box-shadow: 0 0 8px rgb(192, 188, 188);
+    border-radius: 10px;
+    background-color: white;
+}
+
+.formSelect {
+    width: 100%;
+    position: relative;
+    font-size: 15px;
+    padding: 8px 10px;
+    font-weight: 400;
+    margin-left: 3px;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}

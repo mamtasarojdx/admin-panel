@@ -1,0 +1,50 @@
+#purchaseContent {
+    margin-top: 7%;
+}
+
+.item1 {
+    color: #0d377e;
+}
+
+.home {
+    color: #9898ac;
+}
+
+.item {
+    color: #616165;
+}
+
+#CompBack {
+    background-color: white;
+    margin-top: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px gray;
+}
+
+
+.formSelect {
+    font-size: 15px;
+    width: 80%;
+    margin-left: 2px;
+    padding: 3px 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+.footerHr {
+    height: 2px;
+    width: 106%;
+    margin-left: -37px;
+    margin-top: 25px;
+}
+
+.demeter {
+    font-weight: bold;
+}

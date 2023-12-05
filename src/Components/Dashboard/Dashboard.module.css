@@ -1,0 +1,448 @@
+#apexGraph{
+    position: relative;
+}
+
+.bellIcon {
+    margin-left: -90px;
+}
+#dash {
+    position: fixed;
+    top: 80px;
+}
+
+#navbar {
+    position: fixed;
+    background-color: white;
+    height: 60px;
+    box-shadow: 0 0 8px rgb(218, 215, 215);
+}
+
+#dashTab {
+    background-color: white;
+    height: 1840px;
+    box-shadow: 0 0 8px rgb(218, 215, 215);
+}
+
+.demeter {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.menu {
+    font-size: 20px;
+    margin-left: 35px;
+}
+
+.login {
+    background-color: #5D87FF;
+    color: white;
+    border-radius: 5px;
+    border-color: #5D87FF;
+    padding: 2px 14px 5px 14px;
+    border-style: none;
+    font-weight: 700;
+    margin-left: 100px;
+
+}
+
+.logout {
+    background-color: #00e396;
+    color: white;
+    border-radius: 5px;
+    border-color: #00e396;
+    padding: 2px 14px 5px 14px;
+    border-style: none;
+    margin-left: 15px;
+    font-weight: 700;
+    margin-right: 15px;
+}
+
+.man1 {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-left: 0%;
+}
+
+.home {
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 22%;
+    margin-left: 8%;
+}
+
+.dashboard {
+    display: flex;
+    width: 85%;
+}
+
+.dashboardContent {
+    padding: 5px;
+    border-style: none;
+    font-size: 14px;
+    font-weight: 600;
+
+}
+
+.dashboardIcon {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+#chart {
+    box-shadow: 0 0 8px #e8e1e1;
+    margin-top: 5%;
+    border-radius: 8px;
+    background-color: white;
+}
+
+#yearly {
+    box-shadow: 0 0 8px #e8e1e1;
+    margin-top: 10%;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#DonutChart {
+    margin-left: -10%;
+}
+
+#monthlyEarning {
+    box-shadow: 0 0 8px #e8e1e1;
+    margin-top: 9%;
+    height: 40%;
+    border-radius: 10px;
+    background-color: white;
+}
+
+
+.arrow1 {
+    transform: rotate(45deg);
+    height: 23px;
+    width: 23px;
+    background-color: #e6fffa;
+    color: #2adfba;
+    border-radius: 50%;
+}
+
+.arrow2 {
+    transform: rotate(-145deg);
+    height: 23px;
+    width: 23px;
+    background-color: #fbf2ef;
+    color: #fabdc5;
+    border-radius: 50%;
+}
+
+.dot {
+    color: #5d87ff;
+    background-color: #5d87ff;
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+    margin: -15px 0px 0 -3px;
+
+}
+
+.dot1 {
+    color: #5d87ff;
+    background-color: #5d87ff;
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+}
+
+.dot2 {
+    color: rgb(197, 193, 193);
+    background-color: rgb(197, 193, 193);
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+}
+
+#dolarIcon {
+    font-size: 20px;
+    margin-top: 8px;
+
+}
+
+#dolar {
+    color: white;
+    background: #49beff;
+    border-radius: 100%;
+    border-color: #49beff;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    margin: -10px 0 0px 73px;
+
+}
+
+#transactionContent {
+    margin-left: -38%;
+}
+
+.vertical2 {
+    height: 30px;
+    width: 2px;
+    background-color: rgb(238, 236, 236);
+    margin: 2px 0 10px 35px;
+}
+
+.new {
+    font-weight: 500;
+}
+
+.GoDot {
+    font-size: 28px;
+    color: #799cff;
+
+}
+
+.GoDot2 {
+    font-size: 28px;
+    color: #47e6c9;
+
+}
+
+
+.GoDot3 {
+    font-size: 28px;
+    color: #ffd17f;
+
+}
+
+
+.GoDot4 {
+    font-size: 28px;
+    color: #fba38b;
+
+}
+
+#Transactions {
+    box-shadow: 0 0 8px #e8e1e1;
+    border-radius: 10px;
+    padding-bottom: 62px;
+    margin-top: 35px;
+    background-color: white;
+}
+
+#budget {
+    box-shadow: 0 0 8px #e8e1e1;
+    padding: 25px 0px 1px 32px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 35px;
+    background-color: white;
+}
+
+.nameSunil {
+    font-weight: 500;
+}
+
+.profile {
+    color: rgb(154, 149, 149);
+}
+
+.name {
+    color: rgb(154, 149, 149);
+}
+
+.btnLow {
+    border-radius: 15px;
+    color: white;
+    background-color: #5d87ff;
+    border-color: #5d87ff;
+    border-style: none;
+    padding: 0px 10px 3px 10px;
+    font-weight: 600;
+}
+
+.btnMedium {
+    border-radius: 15px;
+    color: white;
+    background-color: #49beff;
+    border-color: #49beff;
+    border-style: none;
+    padding: 0px 10px 3px 10px;
+    font-weight: 600;
+}
+
+
+.btnHigh {
+    border-radius: 15px;
+    color: white;
+    background-color: #fa896b;
+    border-color: #fa896b;
+    border-style: none;
+    padding: 0px 10px 3px 10px;
+    font-weight: 600;
+}
+
+
+
+.btnCritical {
+    border-radius: 15px;
+    color: white;
+    background-color: #13deb9;
+    border-color: #13deb9;
+    border-style: none;
+    padding: 0px 10px 3px 10px;
+    font-weight: 600;
+}
+
+#images {
+    margin-top: 40px;
+}
+
+.dolar5 {
+    font-size: 18px;
+    padding-top: 17%;
+    margin-left: -8%;
+}
+
+#dolar6 {
+    text-decoration: line-through;
+    text-decoration-color: gray;
+    padding-top: 2%;
+    margin-left: 8%;
+
+}
+
+#star {
+    color: #ffc244;
+    padding-left: 20%;
+
+}
+
+.basket {
+    position: absolute;
+    bottom: 65px;
+    right: 20px;
+    border-radius: 50%;
+    background-color: #5d87ff;
+    height: 38px;
+    width: 38px;
+    color: white;
+    padding: 4px 0 0px 11px;
+}
+
+#cardTitle {
+    margin-left: -2%;
+}
+
+.lastContent {
+    color: gray;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 4%;
+}
+
+#imageBack {
+    box-shadow: 0 0 8px #aca9a9;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.salePart {
+    font-weight: 600;
+    /* margin-top: 4px; */
+}
+
+#sales1 {
+    box-shadow: 0 0 8px #aca9a9;
+    margin-top: 80px;
+    padding: 10px;
+    width: 32%;
+    margin-left: 13px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+#sales2 {
+    box-shadow: 0 0 8px #aca9a9;
+    margin-left: 15px;
+    margin-top: 80px;
+    padding: 10px;
+    width: 32%;
+    border-radius: 8px;
+    background-color: white;
+}
+
+#sales3 {
+    box-shadow: 0 0 8px #aca9a9;
+    width: 31%;
+    margin-left: 15px;
+    border-radius: 8px;
+    margin-top: 80px;
+    background-color: white;
+}
+
+.sale1 {
+    color: gray;
+    font-size: 12px;
+}
+
+.mobile {
+    font-size: 25px;
+    color: #5268f3;
+    margin: 9px 0 0 10px;
+}
+
+#mobile {
+
+    background-color: #eaebf9;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+}
+
+.math34 {
+    color: #5268f3;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.purchase {
+    font-size: 25px;
+    color: #66cc6f;
+    margin: 9px 0 0 10px;
+}
+
+#purchase {
+
+    background-color: #e5f5e6;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+}
+
+.math58 {
+    color: #4e9b90;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.cogs {
+    font-size: 25px;
+    color: #ff771d;
+    margin: 9px 0 0 10px;
+}
+
+#cogs {
+
+    background-color: #f6e5da;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+}
+
+.math0 {
+    color: #ff771d;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.about1 {
+    width: 100%;
+}
