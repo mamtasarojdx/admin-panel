@@ -1,0 +1,46 @@
+#loginPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9a616d;
+    width: 1520px;
+    height: 715px;
+}
+
+
+#loginForm {
+    background-color: white;
+    text-align: start;
+    padding: 0 40px;
+
+}
+
+.demeterHead {
+    font-weight: bolder;
+    margin-top: 80px;
+}
+
+.signPara {
+    font-weight: 600;
+}
+
+#inputMail {
+    font-weight: 600;
+}
+
+.loginBtn {
+    cursor: pointer;
+    font-weight: 600;
+    color: #fff;
+    background-color: black;
+    border-color: black;
+    border-radius: 0.25rem;
+    padding: 0.375rem 0.75rem;
+    width: 100%;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.forget {
+    color: black;
+    text-decoration-color: black;
+}

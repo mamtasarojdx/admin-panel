@@ -1,5 +1,6 @@
 import React from "react";
 import Chart from "react-apexcharts";
+import style from "./Dashboard.module.css";
 const data = {
   series: [
     {
@@ -21,6 +22,7 @@ const data = {
         horizontal: false,
         columnWidth: "55%",
         endingShape: "rounded",
+        
       },
     },
     dataLabels: {
@@ -33,6 +35,7 @@ const data = {
     },
     xaxis: {
       categories: ["16/08", "17/08", "18/08", "19/08", "20/08", "21/08", "22/08", "23/08"],
+      
     },
     // yaxis: {
     //   title: {
@@ -41,6 +44,7 @@ const data = {
     // },
     fill: {
       opacity: 1,
+     
       // colors: "#64c8ff"
     },
     tooltip: {
@@ -55,8 +59,8 @@ const data = {
 function ApexColumnBarChart() {
   return (
     <>
-      <Chart options={data.options} series={data.series} type="bar" height={350} />
+      <Chart options={data.options} series={data.series} type="bar" height={350} className={style.apexChart}/>
     </>
   );
 }
-export default ApexColumnBarChart;
+export default ApexColumnBarChart

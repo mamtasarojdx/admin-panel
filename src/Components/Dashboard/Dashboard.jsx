@@ -12,10 +12,26 @@ import { FaBasketShopping } from "react-icons/fa6";
 import { FaMobileRetro } from "react-icons/fa6";
 import { BsFillBagCheckFill } from "react-icons/bs";
 import { BsFillBoxSeamFill } from "react-icons/bs";
+import RealTimeChart from "./RealTimeChart";
 
 function Dashboard() {
   return (
     <>
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12 col-md-12 col-sm-12 text-start">
+            <div className={style.items}>
+              {" "}
+              <h5 className={style.item1}>Dashboard</h5>
+              <p>
+                <span className={style.home1}>Home /</span>
+                <span className={style.item}>Dashboard</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* -----------Sales,Open Purchase,Cogs-------- */}
       <div className="container" id={style.saleContent}>
         <div className="row">
@@ -118,7 +134,7 @@ function Dashboard() {
                   </div>
                 </div>
                 {/* -----------donut chart---------- */}
-                <div className="col-lg-6 col-md-6 col-sm-6" id={style.DonutChart}>
+                <div className="col-lg-6 col-md-6 col-sm-6">
                   <DonutChart />
                 </div>{" "}
               </div>{" "}
@@ -142,7 +158,9 @@ function Dashboard() {
                 </div>
               </div>
 
-              {/* <RealTimeChart/> */}
+              <div className="col-lg-12 col-md-12 col-sm-12">
+                {/* <RealTimeChart /> */}
+              </div>
             </div>
           </div>
         </div>

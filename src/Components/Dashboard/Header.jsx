@@ -42,7 +42,6 @@ function Header() {
 
           <div className="col-lg-3 col-md-3 col-sm-3">
             <div>
-              <button className={style.login}>Login</button>
               <button className={style.logout}>Log out</button>
 
               <img src="https://themewagon.github.io/Modernize/src/assets/images/profile/user-1.jpg" className={style.man1}></img>
@@ -59,7 +58,11 @@ function Header() {
               <div
                 className={style.dashboard}
                 onClick={() => IsActive(1)}
-                style={active === 1 ? { backgroundColor: "#5d87ff", color: "white",borderRadius:"10px" } : { color: "black" }}
+                style={
+                  active === 1
+                    ? { backgroundColor: "#5d87ff", color: "white", borderRadius: "10px", cursor: "pointer" }
+                    : { color: "#0d377e", cursor: "pointer" }
+                }
               >
                 <span>
                   {" "}
@@ -71,11 +74,15 @@ function Header() {
               <div
                 className={style.dashboard}
                 onClick={() => IsActive(2)}
-                style={active === 2 ? { backgroundColor: "#5d87ff", color: "white",borderRadius:"10px" } : { color: "black" }}
+                style={
+                  active === 2
+                    ? { backgroundColor: "#5d87ff", color: "white", borderRadius: "10px", cursor: "pointer" }
+                    : { color: "#0d377e", cursor: "pointer" }
+                }
               >
                 <span>
                   {" "}
-                  < MdAssignmentAdd className={style.dashboardIcon} />
+                  <MdAssignmentAdd className={style.dashboardIcon} />
                 </span>
                 <span className={style.dashboardContent}>Sales Report</span>
               </div>
@@ -83,7 +90,11 @@ function Header() {
               <div
                 className={style.dashboard}
                 onClick={() => IsActive(3)}
-                style={active === 3 ? { backgroundColor: "#5d87ff", color: "white",borderRadius:"10px" } : { color: "black" }}
+                style={
+                  active === 3
+                    ? { backgroundColor: "#5d87ff", color: "white", borderRadius: "10px", cursor: "pointer" }
+                    : { color: "#0d377e", cursor: "pointer" }
+                }
               >
                 <span>
                   {" "}
@@ -95,7 +106,11 @@ function Header() {
               <div
                 className={style.dashboard}
                 onClick={() => IsActive(4)}
-                style={active === 4 ? { backgroundColor: "#5d87ff", color: "white",borderRadius:"10px" } : { color: "black" }}
+                style={
+                  active === 4
+                    ? { backgroundColor: "#5d87ff", color: "white", borderRadius: "10px", cursor: "pointer" }
+                    : { color: "#0d377e", cursor: "pointer" }
+                }
               >
                 <span>
                   {" "}
@@ -107,7 +122,11 @@ function Header() {
               <div
                 className={style.dashboard}
                 onClick={() => IsActive(5)}
-                style={active === 5 ? { backgroundColor: "#5d87ff", color: "white",borderRadius:"10px" } : { color: "black" }}
+                style={
+                  active === 5
+                    ? { backgroundColor: "#5d87ff", color: "white", borderRadius: "10px", cursor: "pointer" }
+                    : { color: "#0d377e", cursor: "pointer" }
+                }
               >
                 <span>
                   {" "}
@@ -119,7 +138,11 @@ function Header() {
               <div
                 className={style.dashboard}
                 onClick={() => IsActive(6)}
-                style={active === 6 ? { backgroundColor: "#5d87ff", color: "white",borderRadius:"10px" } : { color: "black" }}
+                style={
+                  active === 6
+                    ? { backgroundColor: "#5d87ff", color: "white", borderRadius: "10px", cursor: "pointer" }
+                    : { color: "#0d377e", cursor: "pointer" }
+                }
               >
                 <span>
                   {" "}

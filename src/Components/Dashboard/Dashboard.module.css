@@ -1,13 +1,12 @@
-#apexGraph{
-    position: relative;
-}
+
 
 .bellIcon {
     margin-left: -90px;
 }
+
 #dash {
     position: fixed;
-    top: 80px;
+    top: 90px;
 }
 
 #navbar {
@@ -26,33 +25,39 @@
 .demeter {
     font-weight: bolder;
     font-size: 20px;
+    color: #0d377e;
+}
+
+.items {
+    margin-top: 7%;
+}
+
+.item1 {
+    color: #0d377e;
+}
+
+.home1 {
+    color: #9898ac;
+}
+
+.item {
+    color: #616165;
 }
 
 .menu {
     font-size: 20px;
     margin-left: 35px;
+    color: #0d377e;
 }
 
-.login {
+.logout {
     background-color: #5D87FF;
     color: white;
     border-radius: 5px;
     border-color: #5D87FF;
     padding: 2px 14px 5px 14px;
     border-style: none;
-    font-weight: 700;
-    margin-left: 100px;
-
-}
-
-.logout {
-    background-color: #00e396;
-    color: white;
-    border-radius: 5px;
-    border-color: #00e396;
-    padding: 2px 14px 5px 14px;
-    border-style: none;
-    margin-left: 15px;
+    margin-left: 200px;
     font-weight: 700;
     margin-right: 15px;
 }
@@ -102,9 +107,14 @@
     border-radius: 10px;
     background-color: white;
 }
-
-#DonutChart {
-    margin-left: -10%;
+#apexGraph {
+    position: inherit !important;
+}
+.DonutChart {
+    position: inherit !important;
+}
+.apexChart {
+    position: inherit !important;
 }
 
 #monthlyEarning {
@@ -118,6 +128,7 @@
 
 .arrow1 {
     transform: rotate(45deg);
+    position: inherit;
     height: 23px;
     width: 23px;
     background-color: #e6fffa;
@@ -222,7 +233,7 @@
 #Transactions {
     box-shadow: 0 0 8px #e8e1e1;
     border-radius: 10px;
-    padding-bottom: 62px;
+    padding-bottom: 13px;
     margin-top: 35px;
     background-color: white;
 }
@@ -351,7 +362,7 @@
 
 #sales1 {
     box-shadow: 0 0 8px #aca9a9;
-    margin-top: 80px;
+    margin-top: 10px;
     padding: 10px;
     width: 32%;
     margin-left: 13px;
@@ -362,7 +373,7 @@
 #sales2 {
     box-shadow: 0 0 8px #aca9a9;
     margin-left: 15px;
-    margin-top: 80px;
+    margin-top: 10px;
     padding: 10px;
     width: 32%;
     border-radius: 8px;
@@ -374,7 +385,7 @@
     width: 31%;
     margin-left: 15px;
     border-radius: 8px;
-    margin-top: 80px;
+    margin-top: 10px;
     background-color: white;
 }
 
