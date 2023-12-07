@@ -1,8 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./loginStyle.module.css";
-import { Link } from "react-router-dom";
+import axios from "axios";
+import { Link, useNavigate,navigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
+  const data = { email: "", password: "" };
+
+  const [inputData, setInputData] = useState(data);
+
+  const handleChange = (e) => {
+    let { name, value } = e.target;
+
+    setInputData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async () => {
+    const option = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(inputData),
+    };
+
+    const response = await fetch(`http://192.168.1.121:5000/login?email=${inputData.email}&password=${inputData.password}`, option, { mode: "cors" });
+    const user = await response.json();
+
+    if (response.ok) {
+      // console.log(user);
+      navigate("/header");
+    } else {
+      console.log("error");
+    }
+    sessionStorage.setItem("token", `${user.token}`);
+  };
+
   return (
     <>
       <div className="container-fluid" id={style.loginPage}>
@@ -19,17 +55,34 @@ function Login() {
                 <label for="exampleInputEmail1" class="form-label" id={style.inputMail}>
                   Email address
                 </label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required="required" />
+                <input
+                  type="email"
+                  name="email"
+                  // value={inputData.email}
+                  onChange={handleChange}
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  required="required"
+                />
               </div>
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label" id={style.inputMail}>
                   Password
                 </label>
-                <input type="password" class="form-control" id="exampleInputPassword1" required="required" />
+                <input
+                  type="password"
+                  name="password"
+                  // value={inputData.password}
+                  onChange={handleChange}
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  required="required"
+                />
               </div>
 
               <Link to="/header">
-                <button type="submit" className={style.loginBtn}>
+                <button type="submit" onClick={handleSubmit} className={style.loginBtn}>
                   Login
                 </button>
               </Link>

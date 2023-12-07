@@ -14,10 +14,19 @@ import { BsFillBagCheckFill } from "react-icons/bs";
 import { TbBrandAsana } from "react-icons/tb";
 import { MdAssignmentAdd } from "react-icons/md";
 import { MdAssignment } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
+  const navigate = useNavigate();
+  const [token, setToken] = useState("");
   const [active, IsActive] = useState(1);
   console.log(IsActive);
+
+  const handleClick = (token) => {
+    sessionStorage.removeItem("token");
+    setToken(null);
+    navigate("/");
+  };
 
   return (
     <>
@@ -42,7 +51,9 @@ function Header() {
 
           <div className="col-lg-3 col-md-3 col-sm-3">
             <div>
-              <button className={style.logout}>Log out</button>
+              <button onClick={handleClick} className={style.logout}>
+                Log out
+              </button>
 
               <img src="https://themewagon.github.io/Modernize/src/assets/images/profile/user-1.jpg" className={style.man1}></img>
             </div>
