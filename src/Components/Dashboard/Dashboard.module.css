@@ -99,6 +99,7 @@
     margin-top: 5%;
     border-radius: 8px;
     background-color: white;
+    padding-bottom: 5%;
 }
 
 #yearly {
@@ -456,4 +457,15 @@
 
 .about1 {
     width: 100%;
+}
+.realChart{
+    position: relative;
+    cursor: default;
+    width: 100%;
+    height: 100%;
+    max-height: 75.333px;
+    max-width: 382px;
+}
+.legendText{
+    display: none !important;
 }

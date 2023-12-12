@@ -1,41 +1,42 @@
 import React from "react";
-import { Line } from "react-chartjs-2";
-import { Chart as ChartJS, LineElement, CategoryScale, LinearScale, PointElement, Legend, Tooltip } from "chart.js";
+import style from "./Dashboard.module.css";
+import { LineChart, ResponsiveContainer, Legend, Tooltip, Line, XAxis, YAxis, CartesianGrid } from "recharts";
 
-ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement, Legend, Tooltip);
+const pdata = [
+  {
+    s: 11,
+  },
+  {
+    s: 15,
+  },
+  {
+    s: 5,
+  },
+  {
+    s: 16,
+  },
+  {
+    s: 8,
+  },
+  {
+    s: 12,
+  },
+];
 
 function RealTimeChart() {
-  const data = {
-    labels: ["", "", "","", "", "","", ],
-    datasets: [
-      {
-        // label: "Sales of the Week",
-        data: [0,0.1,0,0.0,0.1,0],
-        backgroundColor: "#6bcaff",
-        borderColor: "#6bcaff",
-        pointBorderColor: "#6bcaff",
-        fill: true,
-        tension: 0.4,
-      },
-    ],
-  };
-
-  const options = {
-    Plugins: {
-      legend: true,
-    },
-    scales: {
-      y: {
-        min: 0,
-        max: 0.1,
-      },
-    },
-  };
   return (
-    <div>
-      <div style={{ width: "20px", height: "20px", padding: "0px" }}></div>
-      <Line data={data} options={options}></Line>
-    </div>
+    <>
+      <ResponsiveContainer width="100%" aspect={3} className={style.realChart} >
+        <LineChart data={pdata} margin={{ right: 20, left: 18, top: 5 }}  width={300} >
+          <CartesianGrid vertical={false} strokeDasharray="0 9" className={style.legendText}/>
+          <XAxis dataKey="name" interval={"preserveStartEnd"} tickLine={false} hide className={style.legendText} />
+          <YAxis tickLine={false} hide className={style.legendText}/>
+          <Legend  style={{display:"none"}}/>
+          <Tooltip />
+          <Line dataKey="s"  stroke="rgb(100,200,255)" activeDot={{ r: 6 }} strokeWidth={2} dot={false} type="monotone" />
+        </LineChart >
+      </ResponsiveContainer >
+    </>
   );
 }
 

@@ -8,15 +8,62 @@ import axios from "axios";
 
 function SalesReport() {
   const [data, setData] = useState([]);
-  useEffect(() => {
-    axios
-      .get("https://jsonplaceholder.typicode.com/posts")
-      .then((response) => {
-        setData(response.data);
-      })
+  console.log(data);
 
-      .catch((error) => console.error("Error:", error));
-  });
+  // useEffect(() => {
+  //   axios
+  //     .get("http://192.168.1.121:5000/sales-report")
+  //     .then((response) => {
+  //       setData(data);
+  //       console.log(response.data);
+  //     })
+
+  //     .catch((error) => console.log(error));
+  // });
+
+  // const handleSubmit = async (e) => {
+  //   let { name, value } = e.target;
+
+  //   setData((prev) => ({
+  //     ...prev,
+  //     [name]: value,
+  //   }));
+
+  //   const option = {
+  //     method: "GET",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(data),
+  //   };
+
+  //   const response = await fetch(
+  //     `http://192.168.1.121:5000/sales-report?poNumber=${data.poNumber}&customerName=${data.customerName}&memo=${data.memo}&orderType=${data.orderType}&quantity=${data.quantity}&subtotalPrice=${data.subtotalPrice}&discount=${data.discount}&tax=${data.tax}&balanceRemaining=${data.balanceRemaining}&dated=${data.dated}`,
+  //     option,
+  //     { mode: "cors" }
+  //   );
+  //   const user = await response.json();
+
+  //   if (response.ok) {
+  //     console.log(user);
+  //   } else {
+  //     console.log("error");
+  //   }
+  // };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://192.168.1.121:5000/sales-report");
+        setData(response.data.data);
+        // console.log(response.data)
+      } catch (error) {
+        console.error("Error fetching data: ", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <>
@@ -157,27 +204,22 @@ function SalesReport() {
                       <th>Dated</th>
                     </tr>
                   </thead>
-                  <tbody>
-                   
-                  </tbody>
 
                   <tbody>
-                  {data.map(item => {
-                          <tr key={item.id}>
-                            <td>{item.poNumber}</td>
-                            <td>{item.customerName}</td>
-                            <td>{item.memo}</td>
-                            <td>{item.orderType}</td>
-                            <td>{item.quantity}</td>
-                            <td>{item.subtotalPrice}</td>
-                            <td>{item.discount}</td>
-                            <td>{item.tax}</td>
-
-                            <td>{item.balance_remaining}</td>
-                            <td>{item.dated}</td>
-                          </tr>
-                      
-                  })}
+                    {data.map((item) => (
+                      <tr key={item.id}>
+                        <td>{item.poNumber}</td>
+                        <td>{item.customerName}</td>
+                        <td>{item.memo}</td>
+                        <td>{item.orderType}</td>
+                        <td>{item.quantity}</td>
+                        <td>{item.subtotalPrice}</td>
+                        <td>{item.discount}</td>
+                        <td>{item.tax}</td>
+                        <td>{item.balanceRemaining}</td>
+                        <td>{item.dated}</td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>{" "}
                 <br />
