@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #9a616d;
+    background-color: #8299b9;
     width: 1520px;
     height: 715px;
 }
@@ -43,4 +43,29 @@
 .forget {
     color: black;
     text-decoration-color: black;
+}
+
+
+
+#forget2{
+    background-color: #e6e8ec;
+    width: 1520px;
+    height: 715px;
+}
+.pageHead{
+ 
+    text-align: center;
+    font-weight: bolder;
+    font-size: 50px;
+    color: #1997ca;
+    margin-top: 15%;
+}
+.backBtn{
+    background-color: #1997ca;
+    color: white;
+    padding: 10px 15px;
+    width: 140px;
+    border: 2px solid #1997ca;
+    border-radius: 8px;
+    margin-top: 3%;
 }

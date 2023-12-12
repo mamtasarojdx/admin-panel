@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import style from "./saleStyle.module.css";
 import { IoSearchOutline } from "react-icons/io5";
 import { BsFillBoxSeamFill } from "react-icons/bs";
 import { BsFillBagCheckFill } from "react-icons/bs";
 import { FaMobileRetro } from "react-icons/fa6";
+import axios from "axios";
 
 function SalesReport() {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    axios
+      .get("https://jsonplaceholder.typicode.com/posts")
+      .then((response) => {
+        setData(response.data);
+      })
+
+      .catch((error) => console.error("Error:", error));
+  });
+
   return (
     <>
       <div>
@@ -146,47 +158,56 @@ function SalesReport() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>KSA 2nd Order</td>
-                      <td>Reem KSA</td>
-                      <td>$934.39</td>
-                      <td>KSA 2nd Order</td>
-                      <td>Web</td>
-                      <td>3,9099</td>
-                      <td>$566.56</td>
-                      <td>$366.56</td>
+                   
+                  </tbody>
 
-                      <td>$566.56444</td>
-                      <td>Nov 03 2023</td>
-                    </tr>
-                    <tr>
-                      <td>KSA 2nd Order</td>
-                      <td>Reem KSA</td>
-                      <td>$934.39</td>
-                      <td>KSA 2nd Order</td>
-                      <td>Web</td>
-                      <td>3,9099</td>
-                      <td>$566.56</td>
-                      <td>$366.56</td>
+                  <tbody>
+                  {data.map(item => {
+                          <tr key={item.id}>
+                            <td>{item.poNumber}</td>
+                            <td>{item.customerName}</td>
+                            <td>{item.memo}</td>
+                            <td>{item.orderType}</td>
+                            <td>{item.quantity}</td>
+                            <td>{item.subtotalPrice}</td>
+                            <td>{item.discount}</td>
+                            <td>{item.tax}</td>
 
-                      <td>$566.56444</td>
-                      <td>Nov 03 2023</td>
-                    </tr>
-                    <tr>
-                      <td>KSA 2nd Order</td>
-                      <td>Reem KSA</td>
-                      <td>$934.39</td>
-                      <td>KSA 2nd Order</td>
-                      <td>Web</td>
-                      <td>3,9099</td>
-                      <td>$566.56</td>
-                      <td>$366.56</td>
-
-                      <td>$566.56444</td>
-                      <td>Nov 03 2023</td>
-                    </tr>
+                            <td>{item.balance_remaining}</td>
+                            <td>{item.dated}</td>
+                          </tr>
+                      
+                  })}
                   </tbody>
                 </table>{" "}
+                <br />
+                {/* <div className="pag-1 d-inline-flex fw-bold m-1">
+                  {pages.map((page, index) => {
+                    return (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentPage(page)}
+                        className={page === currentPage ? "activePage text-decoration-underline " : "pag1"}
+                      >
+                        {page}
+                      </button>
+                    );
+                  })}
+                </div>
+                <div className="d-inline-flex pag-2">
+                  <button type="button" id="prev" className="bt2 fw-bold c" onClick={prevClick} style={{ border: "1px solid rgba(228, 219, 230, 0.399)" }}>
+                    PREV
+                  </button>
+                  <button type="button" className="bt2 fw-bold" onClick={firstClick} style={{ border: "1px solid rgba(228, 219, 230, 0.399)" }}>
+                    FIRST
+                  </button>
+                  <button type="button" className="bt2 fw-bold" onClick={lastClick} style={{ border: "1px solid rgba(228, 219, 230, 0.399)" }}>
+                    LAST
+                  </button>
+                  <button type="button" id="next" className="bt2 fw-bold" onClick={nextClick} style={{ border: "1px solid rgba(228, 219, 230, 0.399)" }}>
+                    NEXT
+                  </button>
+                </div> */}
               </div>
             </div>
           </div>

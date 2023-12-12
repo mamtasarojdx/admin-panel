@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import style from "./Dashboard.module.css";
 import { LuBellRing } from "react-icons/lu";
 import { GoDot } from "react-icons/go";
@@ -14,7 +14,7 @@ import { BsFillBagCheckFill } from "react-icons/bs";
 import { TbBrandAsana } from "react-icons/tb";
 import { MdAssignmentAdd } from "react-icons/md";
 import { MdAssignment } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Header() {
   const navigate = useNavigate();
@@ -23,6 +23,7 @@ function Header() {
   console.log(IsActive);
 
   const handleClick = (token) => {
+    localStorage.removeItem("/");
     sessionStorage.removeItem("token");
     setToken(null);
     navigate("/");

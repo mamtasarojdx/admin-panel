@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "./loginStyle.module.css";
 import axios from "axios";
-import { Link, useNavigate,navigate } from "react-router-dom";
+import { Link, useNavigate, navigate } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 
 function Login() {
   const navigate = useNavigate();
@@ -19,6 +21,16 @@ function Login() {
   };
 
   const handleSubmit = async () => {
+    // event.preventDefault();
+    if (!inputData.email || !inputData.password) {
+      toast.error("Please enter both email and password");
+    } else if (inputData.email === "shubhamkumar@gmail.com" && inputData.password === "kumar@1234") {
+      navigate("/header");
+    } else {
+      console.log("Invalid email or password");
+      // toast.error("Invalid email or password");
+      alert("Invalid email or password");
+    }
     const option = {
       method: "POST",
       headers: {
@@ -31,13 +43,23 @@ function Login() {
     const user = await response.json();
 
     if (response.ok) {
-      // console.log(user);
-      navigate("/header");
+      console.log(user);
     } else {
       console.log("error");
     }
     sessionStorage.setItem("token", `${user.token}`);
+
+    localStorage.setItem("login", true);
   };
+
+  useEffect(() => {
+    // sessionStorage.setItem("login", true);
+    let login = localStorage.getItem("login");
+    if (login) {
+      console.log(login);
+      navigate("/");
+    }
+  });
 
   return (
     <>
@@ -58,7 +80,7 @@ function Login() {
                 <input
                   type="email"
                   name="email"
-                  // value={inputData.email}
+                  value={inputData.email}
                   onChange={handleChange}
                   class="form-control"
                   id="exampleInputEmail1"
@@ -73,7 +95,7 @@ function Login() {
                 <input
                   type="password"
                   name="password"
-                  // value={inputData.password}
+                  value={inputData.password}
                   onChange={handleChange}
                   class="form-control"
                   id="exampleInputPassword1"
@@ -81,16 +103,16 @@ function Login() {
                 />
               </div>
 
-              <Link to="/header">
-                <button type="submit" onClick={handleSubmit} className={style.loginBtn}>
-                  Login
-                </button>
-              </Link>
+              <button type="submit" onClick={handleSubmit} className={style.loginBtn}>
+                Login
+              </button>
 
               <div className="text-center mt-4">
-                <a href="#" className={style.forget}>
-                  Forget Password?
-                </a>
+                <Link to="/forget">
+                  <a href="#" className={style.forget}>
+                    Forget Password?
+                  </a>
+                </Link>
               </div>
             </form>
           </div>
