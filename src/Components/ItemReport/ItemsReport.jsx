@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import style from "./itemStyle.module.css";
+import axios from "axios";
 import { IoSearchOutline } from "react-icons/io5";
 
 function ItemsReport() {
+  const [data, setData] = useState([]);
+  console.log(data);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://192.168.1.122:5000/items-report");
+        setData(data);
+        console.log(response.data);
+      } catch (error) {
+        console.error("Error fetching data: ", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <>
       <div>
@@ -97,33 +115,18 @@ function ItemsReport() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>998789</td>
-                      <td>$9.9</td>
-                      <td>$934.39</td>
-                      <td>PMU unique income</td>
-                      <td>0</td>
-                      <td>Active</td>
-                      <td>jan0627828</td>
+                  {data.map((item) => (
+                      <tr key={item.id}>
+                      <td>{item.Name}</td>
+                      <td>{item.PurchaseCost}</td>
+                      <td>{item.SalesPrice}</td>
+                      <td>{item.IncomeAccountRefFullName}</td>
+                      <td>{item.QuantityOnOrder}</td>
+                      <td>{item.IsActive}</td>
+                      <td>{item.createdAt}</td>
                     </tr>
-                    <tr>
-                      <td>998789</td>
-                      <td>$9.9</td>
-                      <td>$934.39</td>
-                      <td>PMU unique income</td>
-                      <td>0</td>
-                      <td>Active</td>
-                      <td>jan0627828</td>
-                    </tr>
-                    <tr>
-                      <td>998789</td>
-                      <td>$9.9</td>
-                      <td>$934.39</td>
-                      <td>PMU unique income</td>
-                      <td>0</td>
-                      <td>Active</td>
-                      <td>jan0627828</td>
-                    </tr>
+                    ))}
+                    
                   </tbody>
                 </table>{" "}
               </div>

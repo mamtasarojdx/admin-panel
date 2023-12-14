@@ -65,11 +65,11 @@ function Login() {
     <>
       <div className="container-fluid" id={style.loginPage}>
         <div className="row">
-          <div className="col-lg-6 col-md-6 col-sm-6" id={style.img}>
+          <div className="col-lg-6 col-md-6 col-sm-12" id={style.img}>
             <img src="login-img.jpg"></img>
           </div>
 
-          <div className="col-lg-6 col-md-6 col-sm-6" id={style.loginForm}>
+          <div className="col-lg-6 col-md-6 col-sm-12" id={style.loginForm}>
             <h2 className={style.demeterHead}>Demeter Fragrances</h2>
             <p className={style.signPara}>Sign into your account</p>
             <form>
