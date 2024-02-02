@@ -32,6 +32,8 @@ function SalesReport() {
     fetchData();
   }, []);
 
+
+
   let pages = [];
   for (let i = 1; i <= Math.ceil(data.length / postPerPage); i++) {
     pages.push(i);
@@ -41,7 +43,6 @@ function SalesReport() {
   const currentPost = data.slice(firstPostIndex, lastPostIndex);
 
  
-
   function prevClick() {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);

@@ -15,7 +15,6 @@ import ResetPage from "./Components/Forget/ResetPage";
 import Protected from "./Components/Dashboard/Protected";
 import PageNotFound from "./Components/Login/PageNotFound";
 
-
 function App() {
   return (
     <div>
@@ -33,7 +32,6 @@ function App() {
           <Route path="/forget" exact element={<ForgetPage />} />
           <Route path="/reset" exact element={<ResetPage />} />
           <Route path="*" exact element={<PageNotFound />} />
-        
         </Routes>
       </BrowserRouter>
     </div>
